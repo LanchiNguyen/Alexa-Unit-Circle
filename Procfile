@@ -1,1 +1,1 @@
-gunicorn alexa:app --preload
+web: gunicorn alexa:app --preload
