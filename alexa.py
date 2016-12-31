@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_ask import Ask, statement, question, session
 import random
+import os
 
 app = Flask(__name__)
 ask = Ask(app, "/")
@@ -229,4 +230,5 @@ def no_answer():
 
 # To make the app run., same for all Flask apps 
 if __name__ == '__main__':
-	app.run(debug=True)
+	port = int(os.environ.get("PORT", 5000))
+	app.run(host='0.0.0.0', port=port)

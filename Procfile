@@ -1,1 +1,1 @@
-web flask alexa.py
+web: python alexa.py
