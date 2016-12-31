@@ -1,1 +1,1 @@
-web gunicorn alexa:app --preload
+web flask alexa.py
