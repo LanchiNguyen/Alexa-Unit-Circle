@@ -8,7 +8,7 @@ ask = Ask(app, "/")
 
 @app.route('/')
 def homepage():
-	return "<b>poop!poop!poop!poop!"
+	return "This is the Alexa app dashboard"
 
 @ask.launch
 def start_skill():
