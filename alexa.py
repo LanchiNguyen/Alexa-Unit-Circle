@@ -5,6 +5,10 @@ import random
 app = Flask(__name__)
 ask = Ask(app, "/")
 
+@app.route('/')
+def homepage():
+	return "<b>poop!poop!poop!poop!"
+
 @ask.launch
 def start_skill():
 	welcome_message = "Are you ready to do some math?"
