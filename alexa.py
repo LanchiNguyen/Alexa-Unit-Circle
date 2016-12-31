@@ -5,10 +5,6 @@ import random
 app = Flask(__name__)
 ask = Ask(app, "/")
 
-@app.route('/')
-def homepage():
-	return "<b>poop!poop!poop!poop!"
-
 @ask.launch
 def start_skill():
 	welcome_message = "Are you ready to do some math?"
@@ -218,13 +214,13 @@ def generate_question():
 def answer(their_answer):
 	correct_answer = session.attributes['correct']
 	if their_answer == correct_answer:
-		return question("Smart baby. Wanna continue?")
+		return question("Excellent. Wanna continue?")
 	else:
-		return question("Are you a retard? Try another one?")
+		return question("Sorry, that's the wrong answer. Try another one?")
 
 @ask.intent("NoIntent")
 def no_answer():
-	reply = "well fuck you"
+	reply = "See you again."
 	return statement(reply)
 
 # To make the app run., same for all Flask apps 
